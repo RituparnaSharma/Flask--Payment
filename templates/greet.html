@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    {% if error_val ==500 %}
+        <div class="bt1">
+            <h1 >505 : Internal Server Error</h1>
+        </div>
+    {% elif error_val ==200 %}
+        <div class="bt2">
+            <h1 >404 : Bad input request</h1>
+        </div>
+    {% else %}
+        <div  class="bt3">
+            <h1 >Payment Successfull </h1>
+        </div>
+    {% endif %}
+{% endblock %}

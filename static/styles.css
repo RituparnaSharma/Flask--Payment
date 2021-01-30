@@ -1,0 +1,22 @@
+
+.container > form{
+    display:flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin: auto;
+    width: 50%;
+
+}
+
+.bt1>h1{
+    text-align: center;
+    border: 3px solid red;
+}
+.bt2>h1{
+    text-align: center;
+    border: 3px solid yellow;
+}
+.bt3>h1{
+    text-align: center;
+    border: 3px solid green;
+}

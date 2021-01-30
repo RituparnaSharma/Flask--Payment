@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <div class="bt3">
+         <h1>Register</h1>
+    </div>
+    <div class="container">
+    <form action ="/Submit" method="post">
+        Credit Card No <input type = "text" name ="CcdNo" placeholder="Number" >
+        Name <input type = "text" name ="CardHolder" placeholder="Name">
+        Exp Date<input type = "text" name ="ExpirationDate" placeholder="MM/YY exp (02/21)" >
+        Code <input type = "password" name ="SecurityCode" placeholder="csv" >
+        Amount <input type = "number" min="1" name ="Amount" step =0.01 value=0.00>
+
+        <input type="submit" value="Pay">
+    </form>
+</div>
+{% endblock %}
