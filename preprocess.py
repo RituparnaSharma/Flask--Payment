@@ -32,8 +32,8 @@ class verify:
 
     """
     
-    for any Premium Payment Gateway,
-    check if the payment is true arr false (payment=?)
+    for any Payment Gateway,
+    check if the payment is true or false (payment=?)
     if true,function will return (gateway and True)
     if False ,call itself recursively until the counter value will equal to zero.
     
@@ -94,7 +94,7 @@ class verify:
 
         """
         if All inputs are correct ,Amount will be forwarded to the PaymentGateway method  
-        value of variable payment will decide the success and failure of payment -->
+        value of payment will decide the success and failure of payment -->
         
         """
         if permission:
