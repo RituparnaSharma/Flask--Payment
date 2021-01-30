@@ -79,14 +79,14 @@ class verify:
         # Check the possibility of bad input -->
         permission = False
         try:
-            for i in [CreditCardNumber, CardHolder, ExpirationDate, SecurityCode]:
+            for i in [CreditCardNumber, CardHolder, ExpirationDate]:
                 assert len(str(i)) > 0
                 assert type(i) == str
             today = datetime.datetime.strptime(datetime.date.today().strftime("%m/%y"), "%m/%y")  # current month/year
             exp_date = datetime.datetime.strptime(ExpirationDate, "%m/%y")  # provider  month/year
             assert verify.__ValidateCard(CreditCardNumber)
             assert (exp_date - today).days > 0
-            assert len(str(SecurityCode)) == 3
+            # security code optional
             assert float(Amount) > 0
             permission = True
         except:

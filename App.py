@@ -19,8 +19,8 @@ def greet():
             'Amount': request.form.get("Amount")}
     print(verify.ProcessPayment(**info))
     if not verify.ProcessPayment(**info):
-        return render_template('greet.html', error_val=200)
-    elif verify.ProcessPayment(**info) is "Error500":
+        return render_template('greet.html', error_val=400)
+    elif verify.ProcessPayment(**info) == "Error500":
         return render_template('greet.html', error_val=500)
     else:
         return render_template('greet.html')
