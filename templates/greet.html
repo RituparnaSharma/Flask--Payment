@@ -1,17 +1,21 @@
 {% extends "layout.html" %}
 
 {% block body %}
+    {% set link %}<div ><a href ="/">Click here</a> To return to payment page</div>{% endset %}
     {% if error_val ==500 %}
         <div class="bt1">
             <h1 >505 : internal server error</h1>
         </div>
+        {{link}}
     {% elif error_val ==400 %}
         <div class="bt2">
             <h1 >404 : bad request</h1>
         </div>
+        {{link}}
     {% else %}
         <div  class="bt3">
             <h1 >200 OK </h1>
         </div>
+        {{link}}
     {% endif %}
 {% endblock %}
